@@ -9,6 +9,7 @@ import { ServicesGrid } from "@/components/ui/services-grid";
 import { AppointmentForm } from "@/components/ui/appointment-form";
 import { HeroSection } from "@/components/ui/hero-section";
 import { ParallaxImage } from "@/components/ui/parallax-image";
+import { BrandBackdrop } from "@/components/ui/brand-backdrop";
 
 const PROJECTS = [
   {
@@ -224,31 +225,39 @@ export default function Home() {
         <AppointmentForm />
       </section>
 
-      {/* Authoritative Footer */}
-      <footer className="px-6 md:px-24 py-24 bg-white border-t border-black/5 relative z-30">
-        <div className="flex flex-col items-center mb-32">
-           <h2 className="text-[18vw] font-black tracking-tighter leading-none select-none opacity-[0.03] absolute top-0 pointer-events-none">KATYANI</h2>
-           <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-24 relative z-10">
-              <div className="flex flex-col gap-8">
-                 <span className="text-[10px] font-mono text-black/40 tracking-widest">HEAD_QUARTERS: LUCKNOW, IN</span>
-                 <p className="text-lg font-light leading-relaxed text-black/60">
-                    Katyani Constructions is committed to reshaping the architectural horizon through 
-                    engineering precision and innovative design paradigms.
-                 </p>
+      {/* Authoritative Phenomenal Footer */}
+      <footer className="relative bg-black py-24 pb-48 overflow-hidden">
+        <BrandBackdrop />
+        
+        <div className="absolute inset-x-0 bottom-24 flex justify-center px-6 md:px-24">
+          <div className="w-full max-w-6xl p-12 md:p-24 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] shadow-2xl relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+              <div className="flex flex-col gap-12">
+                <span className="text-[10px] font-mono text-white/40 tracking-[0.5em] uppercase">Head_Quarters // Lucknow</span>
+                <p className="text-2xl font-light text-white/70 leading-relaxed">
+                  Katyani Constructions is committed to <span className="text-white italic font-medium">reshaping the architectural horizon</span> through 
+                  engineering precision and innovative design paradigms.
+                </p>
+                <div className="flex gap-12 mt-4 font-mono text-[9px] tracking-widest text-white/30 font-bold">
+                  {["INSTAGRAM", "LINKEDIN", "X"].map(link => (
+                    <a key={link} href="#" className="hover:text-white transition-colors">{link}</a>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-col gap-12 items-end">
-                 <div className="flex gap-12 font-mono text-[10px] tracking-widest font-bold">
-                    {["INSTAGRAM", "LINKEDIN", "X"].map(link => (
-                      <a key={link} href="#" className="hover:line-through">{link}</a>
-                    ))}
-                 </div>
-                 <span className="text-2xl font-black tracking-tighter">INQUIRIES@KATYANI.COM</span>
+              <div className="flex flex-col gap-16 md:items-end justify-between">
+                <div className="text-left md:text-right">
+                  <span className="text-[10px] font-mono text-white/20 block mb-4 tracking-widest">CONNECT_SECURELY</span>
+                  <span className="text-2xl md:text-4xl font-black tracking-tighter text-white hover:text-blue-400 transition-colors cursor-pointer">
+                    INQUIRIES@KATYANI.COM
+                  </span>
+                </div>
+                <div className="flex flex-col md:items-end gap-2 opacity-30">
+                  <span className="text-[9px] font-mono tracking-widest uppercase">&copy; 2026 KATYANI_CONSTRUCTIONS_GROUP</span>
+                  <span className="text-[9px] font-mono tracking-widest uppercase">DESIGNED_BY_NEBULA_v4.5_ULTRA</span>
+                </div>
               </div>
-           </div>
-        </div>
-        <div className="w-full flex justify-between items-center pt-12 border-t border-black/5 opacity-40">
-           <span className="text-[9px] font-mono tracking-widest uppercase">&copy; 2026 KATYANI_CONSTRUCTIONS_GROUP</span>
-           <span className="text-[9px] font-mono tracking-widest uppercase">DESIGNED_BY_NEBULA_v4.2</span>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
