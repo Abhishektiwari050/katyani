@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500/[0.02] to-transparent pointer-events-none" />
       
       {/* 2. Simplified Crane & Grid Layer */}
-      <div className="opacity-20">
+      <div className="opacity-10">
          <CraneParallax />
       </div>
 
@@ -51,8 +51,9 @@ export function HeroSection() {
       </div>
 
       {/* 3. The Ethereal Build (Assembly Animation) */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center">
+      <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
          <motion.div style={{ scale, opacity, y: yTranslate }} className="w-full h-full relative">
+            <div className="absolute inset-0 bg-black/40 z-20" /> {/* Subtle dimming for text readability */}
             <BuildingSkeleton3D />
          </motion.div>
       </div>
@@ -71,7 +72,7 @@ export function HeroSection() {
                transition={{ delay: 1, duration: 1.5 }}
                className="h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
             />
-            <span className="text-[10px] md:text-sm font-light tracking-[1em] text-white/30 uppercase pl-[1em]">
+            <span className="text-[10px] md:text-sm font-light tracking-[1em] text-white/50 uppercase pl-[1em]">
                Architecting Perfection
             </span>
          </div>
@@ -90,8 +91,8 @@ export function HeroSection() {
                   transition={{ delay: 2 + (i * 0.2), duration: 1 }}
                   className="flex items-center gap-8 px-4 py-2 border-l border-white/10 bg-white/[0.01] backdrop-blur-sm"
                >
-                  <span className="text-[8px] font-mono text-white/20 tracking-widest">{stat.label}</span>
-                  <span className="text-[11px] font-mono text-white/60 tracking-tighter">{stat.val}</span>
+                  <span className="text-[8px] font-mono text-white/40 tracking-widest">{stat.label}</span>
+                  <span className="text-[11px] font-mono text-white/90 tracking-tighter">{stat.val}</span>
                </motion.div>
             ))}
          </div>
@@ -109,7 +110,7 @@ export function HeroSection() {
             transition={{ repeat: Infinity, duration: 4 }}
             className="w-[1px] bg-gradient-to-t from-white/40 to-transparent" 
          />
-         <span className="text-[8px] font-mono tracking-[0.6em] text-white/20 uppercase pl-[0.6em]">Initiate Assembly</span>
+         <span className="text-[8px] font-mono tracking-[0.6em] text-white/40 uppercase pl-[0.6em]">Initiate Assembly</span>
       </div>
     </section>
   );

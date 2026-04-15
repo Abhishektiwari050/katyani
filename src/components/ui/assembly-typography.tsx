@@ -13,7 +13,7 @@ export function AssemblyTypography({ text = "KATYANI", className }: AssemblyTypo
       <div className="flex flex-col items-center gap-0">
         
         {/* The 'Katyani' Construction Assembly */}
-        <h1 className="text-[14vw] md:text-[12rem] font-black leading-[0.8] tracking-tighter uppercase flex items-center justify-center">
+        <h1 className="text-[14vw] md:text-[12rem] font-black leading-[0.8] tracking-tighter text-white uppercase flex items-center justify-center">
           {text.split("").map((char, index) => (
             <div key={index} className="relative group overflow-visible">
               <motion.span
