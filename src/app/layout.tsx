@@ -28,10 +28,10 @@ export default function RootLayout({
           <SterlingGateNavigation 
             logo="KATYANI"
             links={[
-              { id: "01", label: "Projects", href: "#projects" },
-              { id: "02", label: "Philosophy", href: "#philosophy" },
-              { id: "03", label: "Studio", href: "#studio" },
-              { id: "04", label: "Inquire Now", href: "#contact" },
+              { id: "01", label: "Projects", href: "/projects" },
+              { id: "02", label: "Philosophy", href: "/about" },
+              { id: "03", label: "Studio", href: "/about#team" },
+              { id: "04", label: "Contact", href: "/contact" },
             ]}
           />
           <main className="relative z-0">

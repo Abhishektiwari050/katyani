@@ -10,7 +10,34 @@ const METADATA_ITEMS = [
   { label: "SAFETY_LVL", value: "OSHA_AUTHORITATIVE" },
 ];
 
-export function TechnicalMetadata() {
+export interface TechnicalMetadataProps {
+  label?: string;
+  value?: string;
+  timestamp?: string;
+  isBackground?: boolean;
+}
+
+export function TechnicalMetadata({ 
+  label, 
+  value, 
+  timestamp,
+  isBackground = false 
+}: TechnicalMetadataProps) {
+  if (!isBackground && (label || value || timestamp)) {
+    return (
+        <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-4">
+                <div className="w-8 h-px bg-black opacity-20"></div>
+                <span className="text-[10px] font-mono tracking-[0.4em] opacity-40 uppercase">{label}</span>
+            </div>
+            <div className="flex justify-between items-baseline border-b border-black/10 pb-4">
+                <h4 className="text-xl font-bold tracking-tighter uppercase">{value}</h4>
+                <span className="text-[10px] font-mono opacity-20">{timestamp}</span>
+            </div>
+        </div>
+    );
+  }
+
   return (
     <div className="absolute inset-0 pointer-events-none p-6 md:p-12 mix-blend-difference">
       {/* Corner Brackets */}

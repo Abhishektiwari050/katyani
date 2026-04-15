@@ -2,16 +2,19 @@
 
 import { motion } from "framer-motion";
 
-export function AssemblyTypography() {
-  const brandName = "KATYANI";
-  
+export interface AssemblyTypographyProps {
+  text?: string;
+  className?: string;
+}
+
+export function AssemblyTypography({ text = "KATYANI", className }: AssemblyTypographyProps) {
   return (
-    <div className="relative z-20 pointer-events-none">
+    <div className={`relative z-20 pointer-events-none ${className}`}>
       <div className="flex flex-col items-center gap-0">
         
         {/* The 'Katyani' Construction Assembly */}
-        <h1 className="text-[14vw] md:text-[12rem] font-black leading-[0.8] tracking-tighter text-white uppercase flex items-center justify-center">
-          {brandName.split("").map((char, index) => (
+        <h1 className="text-[14vw] md:text-[12rem] font-black leading-[0.8] tracking-tighter uppercase flex items-center justify-center">
+          {text.split("").map((char, index) => (
             <div key={index} className="relative group overflow-visible">
               <motion.span
                 initial={{ opacity: 0, y: 100, rotateX: 90 }}
