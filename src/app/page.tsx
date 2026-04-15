@@ -201,23 +201,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-              <div className="flex justify-between items-start border-b border-black/10 pb-8">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="px-2 py-0.5 border border-black/20 text-[9px] font-mono opacity-50 uppercase">{project.location}</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                    <p className="text-[10px] font-bold uppercase tracking-widest">{project.status}</p>
-                  </div>
-                  <h3 className="text-4xl md:text-5xl font-black tracking-tighter group-hover:translate-x-6 transition-transform duration-700">
-                    {project.title}
-                  </h3>
-                </div>
-                <span className="text-4xl font-light text-black/10 tabular-nums">0{project.id}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
       {/* Stats Layer */}
       <section className="bg-white">
